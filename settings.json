@@ -1,0 +1,10 @@
+{
+    "workbench.settings.applyToAllProfiles": [
+        "colorHelper.formatsOrder"
+    ],
+    "colorHelper.disableGpu": 1,
+    "colorHelper.disableShadow": true,
+    "colorHelper.disableTransparent": true,
+    "colorHelper.storeDir": "~/my-app/color-palettes",
+    "colorHelper.resident": true
+}

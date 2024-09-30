@@ -1,14 +1,17 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
+import React from 'react';
 
 export type ThemedTextProps = TextProps & {
+  children: React.ReactNode,
   lightColor?: string;
   darkColor?: string;
   type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link';
 };
 
 export function ThemedText({
+  children,
   style,
   lightColor,
   darkColor,
@@ -29,14 +32,15 @@ export function ThemedText({
         style,
       ]}
       {...rest}
-    />
+    >{children}</Text>
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   default: {
-    fontSize: 16,
+    fontSize: 24,
     lineHeight: 24,
+    color: "#fff"
   },
   defaultSemiBold: {
     fontSize: 16,
@@ -58,3 +62,4 @@ const styles = StyleSheet.create({
     color: '#0a7ea4',
   },
 });
+
